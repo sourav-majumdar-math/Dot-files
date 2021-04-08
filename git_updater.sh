@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIRECTORY="/home/sourav/Dot-files-main/"
+DIRECTORY="/home/sourav/Dot-files/"
 
 mkdir -p  $DIRECTORY
 
