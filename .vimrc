@@ -23,7 +23,7 @@ call plug#end()
 colorscheme wal
 set background=dark
 
-
+set clipboard=unnamedplus
 
 
 
