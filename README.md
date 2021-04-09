@@ -36,10 +36,13 @@ Install with ``apt install ranger``. Then ``mkdir ~/.config/ranger`` and copy th
 
 ``dwm``:``make`` and ``sudo make clean install``
 
-## slstatus
+## slstatus (LEGACY)
 
 Install ``awesome-fonts``. Then ``make`` and ``sudo make clean install``.
 
+## dwmblocks
+
+Install `awesome-fonts`.
 
 ## Battery Notification
 
