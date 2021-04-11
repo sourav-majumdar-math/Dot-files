@@ -34,7 +34,7 @@ Install with ``apt install ranger``. Then ``mkdir ~/.config/ranger`` and copy th
 ## dwm and alacritty
  ``sudo add-apt-repository ppa:aslatter/ppa`` and ``sudo apt install alacritty``
 
-``dwm``:``make`` and ``sudo make clean install``
+``dwm``:``make`` and ``sudo make clean install``. Edit config.def.h to update.
 
 ## slstatus (LEGACY)
 
@@ -42,7 +42,7 @@ Install ``awesome-fonts``. Then ``make`` and ``sudo make clean install``.
 
 ## dwmblocks
 
-Install `awesome-fonts`.
+Install `awesome-fonts`. Edit config.h to update.
 
 ## Battery Notification
 
