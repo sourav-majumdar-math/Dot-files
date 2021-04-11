@@ -46,7 +46,8 @@ static Block blocks[] = {
         { PATH("calendar.sh"),          NULL,                           1000,             1},
         { PATH("volume.sh"),            PATH("volume_button.sh"),       1,              2},
         { PATH("cpu_temp.sh"),          PATH("cpu_temp_button.sh"),     1000,              4},
-        { PATH("battery.sh"),           PATH("battery_button.sh"),      30000,             3},
+        { PATH("ram.sh"),         	NULL,                           1000,             6},
+	{ PATH("battery.sh"),           PATH("battery_button.sh"),      1000,             3},
        	{ PATH("wifi.sh"),           	PATH("wifi_button.sh"),      	1000,             5}, 
 	{ NULL } /* just to mark the end of the array */
 };
