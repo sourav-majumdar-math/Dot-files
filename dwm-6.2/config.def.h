@@ -47,7 +47,7 @@ static const Rule rules[] = {
 	{ "Alacritty",  NULL,       NULL,       0,       0,           -1 },
 	{ "Firefox",  NULL,       NULL,       1<<1,       0,           -1 },
         { "RStudio",  NULL,      NULL,       1<<2,       0,           -1 },
-	{ "Zathura",  NULL,      NULL,       1<<3,       0,           -1 }
+	{ "Zathura",  NULL,      NULL,       0,       0,           -1 }
 };
 
 /* layout(s) */

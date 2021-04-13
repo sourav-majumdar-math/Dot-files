@@ -8,7 +8,6 @@ if [[ $charge == "Charging" ]]; then
 	ICON=⚡
 elif [[ $charge == "Full" ]]; then
 	ICON=⚡
-	notify-send "Battery is Charged"
 elif [[ $capacity -gt 75 ]]; then
 	ICON= 
 elif [[ $capacity -le 75 && $capacity -gt 50 ]]; then
