@@ -44,10 +44,6 @@ Install ``awesome-fonts``. Then ``make`` and ``sudo make clean install``.
 
 Install `awesome-fonts`. Edit config.h to update.
 
-## Battery Notification
-
-Run ``chmod +rx battery_notification.sh`` to create the executable. Install dunst (``apt install dunst``) and copy dunstrc to ``/.config/dunst/``. Open ``crontab -e`` and add ``* * * * * export DISPLAY=:0.0 && bash -c /home/sourav/battery_notification.sh``. Leave a newline after entry into ``crontab``
-
 ## Earphone no sound issue
 
 See solution [here](https://askubuntu.com/questions/1272908/ubuntu-20-04-headphones-detected-but-no-sound).
