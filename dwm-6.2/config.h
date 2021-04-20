@@ -36,7 +36,7 @@ static const char *colors[][3]      = {
 };
 #include <X11/XF86keysym.h>
 /* tagging */
-static const char *tags[] = { " ", " ", " ", " ", " "," ", " " , " ", " "," "};
+static const char *tags[] = { " ", " ", " ", " ", " ", " "," "};
 
 static const Rule rules[] = {
 	/* xprop(1):
