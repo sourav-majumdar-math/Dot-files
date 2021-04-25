@@ -44,6 +44,10 @@ Install ``awesome-fonts``. Then ``make`` and ``sudo make clean install``.
 
 Install `awesome-fonts`. Edit config.h to update.
 
+## distraction_blocker
+
+Install `brotab` with `pip3 install bt`. Install the firefox extension for the same from [here](https://addons.mozilla.org/en-US/firefox/addon/brotab/). Add the list of sites to block to `list.txt`. `bt` errors happen due to closing a tab which doesn't exist, this can be resolved by disabling and enabling the firefox extension.
+
 ## Earphone no sound issue
 
 See solution [here](https://askubuntu.com/questions/1272908/ubuntu-20-04-headphones-detected-but-no-sound).
