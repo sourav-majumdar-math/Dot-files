@@ -16,12 +16,12 @@ done
 
 if [[ $i == 0 ]]; then
 	u="KB"
-	printf " %.1f %s" "$ram_free" "$u"
+	printf "|  %.1f %s" "$ram_free" "$u"
 elif [[ $i == 1 ]]; then
 	u="MB"
-	printf " %.1f %s" "$ram_free" "$u"
+	printf "|  %.1f %s" "$ram_free" "$u"
 elif [[ $i == 2 ]]; then
 	u="GB"
-	printf " %.2f %s" "$ram_free" "$u"
+	printf "|  %.2f %s" "$ram_free" "$u"
 fi
 

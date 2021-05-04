@@ -64,4 +64,4 @@ fi
 
 wifi_name=$(iwgetid | grep -oP '"\K[^"]+')
 
-printf " %s ↓ %s%s ↑ %s%s %s%%" "$wifi_name" "$wifi_r_speed" "$u_r" "$wifi_t_speed" "$u_t" "$wifi_perc"
+printf "|  %s ↓ %s%s ↑ %s%s %s%%" "$wifi_name" "$wifi_r_speed" "$u_r" "$wifi_t_speed" "$u_t" "$wifi_perc"

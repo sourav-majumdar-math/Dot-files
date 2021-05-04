@@ -33,11 +33,11 @@ pacmd list-sinks |
         }
         END {
             if (f) {
-                printf "%s", h ? (m ? ICONhm : ICONhn) : (m ? ICONsm : ICONsn)
+                printf "| %s", h ? (m ? ICONhm : ICONhn) : (m ? ICONsm : ICONsn)
                 if (vb) {
                     print vb
                 } else {
-                    printf "L%s R%s\n", vl, vr
+                    printf "| L%s R%s\n", vl, vr
                 }
             }
         }

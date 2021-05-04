@@ -20,4 +20,4 @@ else
 	ICON=  
 fi
 
-printf "%s %s%%" "$ICON" "$capacity"
+printf "|\x01 %s %s%%" "$ICON" "$capacity"

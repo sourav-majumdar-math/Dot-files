@@ -25,6 +25,8 @@ set background=dark
 
 set clipboard=unnamedplus
 
+filetype plugin indent on
+
 
 
 
