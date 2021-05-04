@@ -55,3 +55,7 @@ See solution [here](https://askubuntu.com/questions/1272908/ubuntu-20-04-headpho
 ## Firefox Settings
 
 See [here](https://www.privacytools.io/browsers/#about_config). Use the ``CookiesAutoDeleteSettings.json`` for ``CookiesAutoDelete``.
+
+## ticker.sh
+
+`ticker.sh` is a yahoo finance api script by [pstadler](https://github.com/pstadler/ticker.sh). This requires `jq`, install it using `apt install jq`. I use this in the nifty.sh script in dwmblocks/blocks.
