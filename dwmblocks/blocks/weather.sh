@@ -4,7 +4,9 @@
 
 city="Gandhinagar"
 
-report=$(curl --no-progress-meter wttr.in/Gandhinagar?format=3)
+url="wttr.in/"$city"?format=3"
+
+report=$(curl --no-progress-meter "$url")
 
 report_without_city=$(sed "s/$city//g"<<<"$report" | sed 's/://g')
 

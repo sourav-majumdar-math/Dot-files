@@ -1,3 +1,6 @@
 #!/bin/bash
 
-exec alacritty -e nmtui
+wifi_name=$(iwgetid | grep -oP '"\K[^"]+')
+
+message="Wifi SSID: "$wifi_name
+notify-send "$message"

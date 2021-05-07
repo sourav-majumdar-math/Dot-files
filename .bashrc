@@ -142,4 +142,3 @@ unset __conda_setup
 export RANGER_LOAD_DEFAULT_RC=false
 source "$HOME/.cargo/env"
 
-neofetch --disable gpu
