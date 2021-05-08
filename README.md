@@ -11,7 +11,7 @@ Install ``apt install xbindkeys``. ``xbindkeysrc`` is the config file. Place it 
 ## vim 
 
 Install ``vim-plug``, using ``sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'``. Start vim and install plugins with ``:PlugInstall``.
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'``. Start vim and install plugins with `:PlugInstall`. Install `vim-gtk` to enable copying to clipboard from mouse.
        
 ## bright.sh
 
@@ -29,7 +29,7 @@ Add bright.sh to enable brightness function. Copy the 'bright.sh' script into /e
 ```
 ## ranger
 
-Install with ``apt install ranger``. Then ``mkdir ~/.config/ranger`` and copy the contents of the ``ranger`` folder there. Install ``ubeerzug`` for previewing images with ``pip3 install ueberzug``. In ``.comfig/ranger/`` create an executable with ``chmod +x scope.sh``.
+Install with `apt install ranger`. Then `mkdir ~/.config/ranger` and copy the contents of the `ranger` folder there. Install `ueberzug` for previewing images with `pip3 install ueberzug`. In `.config/ranger/` create an executable with `chmod +x scope.sh`.
 
 ## dwm and alacritty
  ``sudo add-apt-repository ppa:aslatter/ppa`` and ``sudo apt install alacritty``
