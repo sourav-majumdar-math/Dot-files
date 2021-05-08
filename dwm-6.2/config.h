@@ -44,11 +44,14 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Alacritty",  NULL,       NULL,       0,       0,           -1 },
-	{ "Firefox",  NULL,       NULL,       1<<1,       0,           -1 },
-        { "RStudio",  NULL,      NULL,       1<<2,       0,           -1 },
-	{ "Zathura",  NULL,      NULL,       0,       0,           -1 }
+	/* class      instance    title       tags mask     isfloating   monitor  float x,y,w,h   floatborderpx */
+	{ "Alacritty",  NULL,     NULL,       0,       		0,           -1,        50,50,500,500,        5  },
+	{ "Alacritty",  NULL,"Floating-Notification", 0,       1,           -1 ,        1400,50,500,500,        5 },
+	{ "Alacritty",  NULL,"Notification-Market", 0,       	1,           -1 ,        1200, 50,700,300,        5 },	
+	{ "Alacritty",  NULL,"Notification-Weather", 0,       	1,           -1 ,        50, 50,1800,1000,        5 },	
+	{ "Firefox",  NULL,       NULL,       1<<1,       	0,           -1 ,        50,50,500,500,        5 },
+        { "RStudio",  NULL,      NULL,       1<<2,       	0,           -1 ,        50,50,500,500,        5 },
+	{ "Zathura",  NULL,      NULL,       0,       		0,           -1 ,        50,50,500,500,        5 }
 };
 
 /* layout(s) */
@@ -145,4 +148,5 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
+
 
