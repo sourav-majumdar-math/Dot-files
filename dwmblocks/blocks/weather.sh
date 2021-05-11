@@ -12,4 +12,4 @@
 
 #printf "|%s" "$report_without_city"
 
-printf "|\u263C"
+printf "|⛅"

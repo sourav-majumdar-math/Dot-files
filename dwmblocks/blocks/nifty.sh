@@ -5,7 +5,6 @@
 
 #printf "| %s" "$result"
 
-printf "|\u0024"
-
+printf '|%b' \\U1f5e0
 #echo $'\u0965'
 

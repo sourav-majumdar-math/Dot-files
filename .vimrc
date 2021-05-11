@@ -12,11 +12,9 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'vimwiki/vimwiki'
 
-Plug 'mattn/calendar-vim'
-
 Plug 'dylanaraps/wal'
 
-Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
+Plug 'mattn/calendar-vim'
 
 call plug#end()
 

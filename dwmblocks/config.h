@@ -13,7 +13,7 @@
    defined in colors array in dwm's config.h and so on.
  * If you wish to change DELIMITERENDCHAR, don't forget to update its value in
    dwm.c and color codes in your pathu programs. */
-#define DELIMITERENDCHAR                10
+#define DELIMITERENDCHAR                31
 
 /* delimiter specified as an array of characters
  * don't remove DELIMITERENDCHAR at the end */
@@ -44,8 +44,9 @@ static const char delimiter[] = { ' ', ' ', ' ', DELIMITERENDCHAR };
 static Block blocks[] = {
 /*      pathu                           pathc                           interval        signal */
         { PATH("calendar.sh"),          NULL,                           1000,             1},
-        { PATH("weather.sh"),         	PATH("weather_button.sh"),      60000,             8},
-	{ PATH("nifty.sh"),         	PATH("nifty_button.sh"),        6000,             9},
+        { PATH("to-do.sh"),         	PATH("to-do_button.sh"),      	0,             10},
+	{ PATH("weather.sh"),         	PATH("weather_button.sh"),      0,             8},
+	{ PATH("nifty.sh"),         	PATH("nifty_button.sh"),        0,             9},
 	{ PATH("volume.sh"),            PATH("volume_button.sh"),       1,              2},
         { PATH("cpu_temp.sh"),          PATH("cpu_temp_button.sh"),     1000,              4},
         { PATH("ram.sh"),         	NULL,                           1000,             6},

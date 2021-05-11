@@ -5,7 +5,7 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "FontAwesome:size=12", "monospace:size=14" };
+static const char *fonts[]          = { "FontAwesome:size=12", "monospace:size=14", "Noto Sans Symbols2: size=14"};
 static const char dmenufont[]       = "monospace:size=14";
 
 static const char col_black[]           = "#222222";
@@ -44,14 +44,14 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor  float x,y,w,h   floatborderpx */
-	{ "Alacritty",  NULL,     NULL,       0,       		0,           -1,        50,50,500,500,        5  },
-	{ "Alacritty",  NULL,"Floating-Notification", 0,       1,           -1 ,        1400,50,500,500,        5 },
-	{ "Alacritty",  NULL,"Notification-Market", 0,       	1,           -1 ,        1200, 50,700,300,        5 },	
-	{ "Alacritty",  NULL,"Notification-Weather", 0,       	1,           -1 ,        50, 50,1800,1000,        5 },	
-	{ "Firefox",  NULL,       NULL,       1<<1,       	0,           -1 ,        50,50,500,500,        5 },
-        { "RStudio",  NULL,      NULL,       1<<2,       	0,           -1 ,        50,50,500,500,        5 },
-	{ "Zathura",  NULL,      NULL,       0,       		0,           -1 ,        50,50,500,500,        5 }
+	/* class      instance    title       tags mask     isfloating   monitor  	float x,y,w,h   	floatborderpx */
+	{ "Alacritty",  NULL,     NULL,       0,       		0,           -1,        50,50,500,500,        		5 },
+	{ "Alacritty",  NULL,	"To-do",	 0,       	1,           -1 ,       50, 50,1800,1000,    	 	5 },
+	{ "Alacritty",  NULL,"Notification-Market", 0,       	1,           -1 ,       1200, 50,700,300,     		5 },	
+	{ "Alacritty",  NULL,"Notification-Weather", 0,       	1,           -1 ,       50, 50,1800,1000,     		5 },	
+	{ "Firefox",  	NULL,      NULL,       1<<1,       	0,           -1 ,       50,50,500,500,        		5 },
+        { "RStudio",  	NULL,      NULL,       1<<2,       	0,           -1 ,       50,50,500,500,        		5 },
+	{ "Zathura",  	NULL,      NULL,       0,       	0,           -1 ,       50,50,500,500,        		5 }
 };
 
 /* layout(s) */
