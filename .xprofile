@@ -1,5 +1,6 @@
 #wal -i /home/sourav/wallpapers 
 #xwallpaper --stretch "$(< ".cache/wal/wal")" &
+export PATH=$PATH:"/home/sourav/anaconda3/bin"
 exec /home/sourav/distraction_blocker/distraction_blocker.sh > /dev/null  &
 dunst &
 wal --theme base16-nord

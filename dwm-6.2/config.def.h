@@ -51,6 +51,7 @@ static const Rule rules[] = {
 	{ "Alacritty",  NULL,"Notification-Weather", 0,       	1,           -1 ,       50, 50,1800,1000,     		5 },	
 	{ "Firefox",  	NULL,      NULL,       1<<1,       	0,           -1 ,       50,50,500,500,        		5 },
         { "RStudio",  	NULL,      NULL,       1<<2,       	0,           -1 ,       50,50,500,500,        		5 },
+	{ "Spyder",  NULL,      NULL,       1<<2,       	0,           -1 ,       50,50,500,500,        		5 },
 	{ "Zathura",  	NULL,      NULL,       0,       	0,           -1 ,       50,50,500,500,        		5 }
 };
 
