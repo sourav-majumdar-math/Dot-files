@@ -36,7 +36,7 @@ Install with `apt install ranger`. Then `mkdir ~/.config/ranger` and copy the co
 Install `zathura-djvu` from apt for djvu compatibility.
 
 ## dwm and alacritty
- ``sudo add-apt-repository ppa:aslatter/ppa`` and ``sudo apt install alacritty``
+ `sudo add-apt-repository ppa:aslatter/ppa` and `sudo apt install alacritty`. `mkdir -p .config/alacritty/` and place `alacritty.yml` there.
 
 ``dwm``:``make`` and ``sudo make clean install``. Edit config.def.h to update.
 
