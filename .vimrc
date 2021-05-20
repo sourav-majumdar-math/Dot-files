@@ -12,14 +12,17 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'vimwiki/vimwiki'
 
-Plug 'dylanaraps/wal'
+Plug 'arcticicestudio/nord-vim'
 
 Plug 'mattn/calendar-vim'
 
 call plug#end()
 
-colorscheme wal
-set background=dark
+set termguicolors
+
+colorscheme nord
+
+set bg=dark
 
 set clipboard=unnamedplus
 

@@ -1,9 +1,10 @@
-wal -i /home/sourav/wallpapers/wallhaven-dg27oj.jpg 
-xwallpaper --stretch "$(< ".cache/wal/wal")" &
+#wal -i /home/sourav/wallpapers/wallhaven-dg27oj.jpg 
+#xwallpaper --stretch "$(< ".cache/wal/wal")" &
+xwallpaper --stretch /home/sourav/wallpapers/wallhaven-dg27oj.jpg &
 export PATH=$PATH:"/home/sourav/anaconda3/bin"
 exec /home/sourav/distraction_blocker/distraction_blocker.sh > /dev/null  &
 dunst &
-#wal --theme base16-nord
+wal --theme base16-nord
 xbindkeys -f ~/.xbindkeysrc &
 exec compton &
 xinput --set-prop $(xinput list --id-only "ELAN1200:00 04F3:3090 Touchpad") "Device Enabled" 0 &
