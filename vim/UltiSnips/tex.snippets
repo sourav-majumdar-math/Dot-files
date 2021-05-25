@@ -1,0 +1,176 @@
+global !p
+def math():
+    return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+
+def comment(): 
+    return vim.eval('vimtex#syntax#in_comment()') == '1'
+
+def env(name):
+    [x,y] = vim.eval("vimtex#env#is_inside('" + name + "')") 
+    return x != '0' and x != '0'
+
+endglobal
+
+snippet template "Basic template"
+\documentclass[12pt]{article}
+%\usepackage[margin=1.25in]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{authblk}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage{filecontents}
+\usepackage{blkarray}
+\usepackage[backend=biber,style=apa,citestyle=authoryear]{biblatex}
+%\addbibresource{Paper.bib}
+\renewcommand*{\nameyeardelim}{\addcomma\space}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{commath} %for norm
+\usepackage{mathrsfs}
+\usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage{tikz-cd}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{xcolor}
+
+\newcommand{\mathcolorbox}[2]{\colorbox{#1}{$\displaystyle #2$}}
+
+\usepackage[english]{babel}
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{exmp}{Example}[section]
+\newtheorem{algo}[theorem]{Algorithm}
+
+\providecommand{\keywords}[1]
+{
+  \small	
+  \textbf{\textit{Keywords---}} #1
+}
+
+
+\begin{document}
+\title{$1}
+\author{}
+\affil{}
+\date{}
+\maketitle
+\abstract{}
+
+$0
+
+\end{document}
+
+endsnippet
+
+# Begin environments
+
+snippet beg "begin{} / end{}" bA
+\begin{$1}
+	$0
+\end{$1}
+endsnippet
+
+snippet eq "begin{equation} / end{equation}" bA
+\begin{equation}
+	$0
+\end{equation}
+endsnippet
+
+snippet def "begin{definition} / end{defintion}" bA
+\begin{definition}
+	$0
+\end{definition}
+endsnippet
+
+snippet thm "begin{theorem} / end{theorem}" bA
+\begin{theorem}
+	$0
+\end{theorem}
+endsnippet
+
+snippet lma "begin{lemma} / end{lemma}" bA
+\begin{lemma}
+	$0
+\end{lemma}
+endsnippet
+
+snippet prp "begin{proposition} / end{proposition}" bA
+\begin{prop}
+	$0
+\end{prop}
+endsnippet
+
+snippet mk "Math" wA
+$${1}$`!p
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ']:
+    snip.rv = ' '
+else:
+    snip.rv = ''
+`$2
+endsnippet
+
+snippet bf "Bold font" 
+\textbf{$1}$0
+endsnippet
+
+snippet ( "bracket1" iA
+($1)$0
+endsnippet
+
+priority 11
+snippet { "bracket2" iA
+{$1}$0
+endsnippet
+
+#priority 10
+#snippet \{ "\bracket2" iA
+#\{$1\}$0
+#endsnippet
+
+snippet [ "bracket3" iA
+[$1]$0
+endsnippet
+
+snippet | "bracket4" iA
+|$1|$0
+endsnippet
+
+snippet \langle "\langle \rangle" iA
+\langle $1 \rangle $0
+endsnippet
+
+snippet --> "rightarrow" iA
+\rightarrow $0
+endsnippet
+
+snippet <-- "leftarrow" iA
+\leftarrow $0
+endsnippet
+
+snippet mbf "\mathbf{}" i
+\mathbf{$1}$0
+endsnippet
+
+snippet mbb "\mathbb{}" i
+\mathbb{$1}$0
+endsnippet
+
+snippet sec "\section{}" bA
+\section{$1}
+$0
+endsnippet
+
+snippet subsec "\subsection{}" bA
+\subsection{$1}
+$0
+endsnippet
+
+snippet c. "\cdot"
+\cdot $0
+endsnippet
+

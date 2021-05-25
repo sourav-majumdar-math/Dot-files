@@ -140,5 +140,4 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 export RANGER_LOAD_DEFAULT_RC=false
-source "$HOME/.cargo/env"
 

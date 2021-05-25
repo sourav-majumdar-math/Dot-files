@@ -58,7 +58,7 @@ See solution [here](https://askubuntu.com/questions/1272908/ubuntu-20-04-headpho
 
 ## Firefox Settings
 
-See [here](https://www.privacytools.io/browsers/#about_config). Use the ``CookiesAutoDeleteSettings.json`` for ``CookiesAutoDelete``.
+See [here](https://www.privacytools.io/browsers/#about_config). Use the `CookiesAutoDeleteSettings.json` for `CookiesAutoDelete`. In case of context menu issue wherein the menu disappears after moving the mouse, set `ui.context_menus.after_mouseup` to `true` in `about:config`.
 
 ## ticker.sh
 
