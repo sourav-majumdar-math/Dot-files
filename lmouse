@@ -1,0 +1,10 @@
+#!/bin/bash
+
+status="$1"
+if [ $status == "on" ] || [ $status == "ON" ]; then
+	xinput --set-prop $(xinput list --id-only "ELAN1200:00 04F3:3090 Touchpad") "Device Enabled" 1
+elif [ $status == "off" ] || [ $status == "OFF" ]; then
+       	xinput --set-prop $(xinput list --id-only "ELAN1200:00 04F3:3090 Touchpad") "Device Enabled" 0
+else
+ 	echo "Unrecognized argument. Argument should be either on/ON or off/OFF"
+fi 

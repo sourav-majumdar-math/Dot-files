@@ -127,17 +127,20 @@ snippet { "bracket2" iA
 {$1}$0
 endsnippet
 
-#priority 10
-#snippet \{ "\bracket2" iA
-#\{$1\}$0
-#endsnippet
+priority 12
+snippet \{ "\bracket2" iA
+\\{$1\\}$0
+endsnippet
 
 snippet [ "bracket3" iA
 [$1]$0
 endsnippet
 
-snippet | "bracket4" iA
-|$1|$0
+snippet $$ "display-math" bA
+$$
+$1
+$$
+$0
 endsnippet
 
 snippet \langle "\langle \rangle" iA
@@ -160,6 +163,10 @@ snippet mbb "\mathbb{}" i
 \mathbb{$1}$0
 endsnippet
 
+snippet mcal "\macal{}" i
+\mathcal{$1}$0
+endsnippet
+
 snippet sec "\section{}" bA
 \section{$1}
 $0
@@ -174,3 +181,7 @@ snippet c. "\cdot"
 \cdot $0
 endsnippet
 
+priority 100
+snippet frac "\frac{}{}" i
+\frac{$1}{$2}$0
+endsnippet

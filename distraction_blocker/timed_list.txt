@@ -1,2 +1,5 @@
 reddit.com 5:00 18:00
 livemint.com 5:00 18:00
+lichess.org 5:00 18:00
+chess.com 5:00 18:00
+chessable.com 5:00 18:00
