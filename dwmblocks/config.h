@@ -46,7 +46,7 @@ static Block blocks[] = {
         { PATH("calendar.sh"),          NULL,                           1000,             1},
         { PATH("to-do.sh"),         	PATH("to-do_button.sh"),      	0,             10},
 	{ PATH("weather.sh"),         	PATH("weather_button.sh"),      0,             8},
-	{ PATH("nifty.sh"),         	PATH("nifty_button.sh"),        0,             9},
+	{ PATH("market.sh"),         	PATH("market_button.sh"),        0,             9},
 	{ PATH("volume.sh"),            PATH("volume_button.sh"),       1,              2},
         { PATH("cpu_temp.sh"),          PATH("cpu_temp_button.sh"),     1000,              4},
         { PATH("ram.sh"),         	NULL,                           1000,             6},

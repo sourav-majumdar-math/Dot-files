@@ -43,6 +43,8 @@ snippet template "Basic template"
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{prop}{Proposition}[section]
+\newtheorem{cor}{Corollary}[section]
+\newtheorem{corollary}{Corollary}[theorem]
 \newtheorem{exmp}{Example}[section]
 \newtheorem{algo}[theorem]{Algorithm}
 
@@ -103,6 +105,13 @@ snippet prp "begin{proposition} / end{proposition}" bA
 \begin{prop}
 	$0
 \end{prop}
+endsnippet
+
+snippet cor "begin{corollary} /end{corollary}" bA
+\begin{corollary}
+$1
+\end{corollary}
+$0
 endsnippet
 
 snippet mk "Math" wA

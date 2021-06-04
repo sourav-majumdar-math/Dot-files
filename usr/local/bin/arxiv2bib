@@ -1,0 +1,47 @@
+#!/bin/bash
+
+if [ -f "$1" ]; then
+	arxiv_id=$(pdftotext "$1" - | head | grep -io "arXiv:.\S*" -m 1 | sed 's/arXiv://g')
+else
+	arxiv_id="$1"
+fi
+arxiv_call=$(curl -s http://export.arxiv.org/api/query?id_list=$arxiv_id)
+
+remove_header=$(echo $arxiv_call | sed 's/.*<entry>/<entry>/' )
+
+title=$(echo "$arxiv_call" | grep -io "<title>.*</title>" -m 1| sed 's/<title>//g' | sed 's/<\/title>//g')
+
+is_updated=$(echo "$remove_header" | grep -io "<updated>.*</updated>" | sed 's/<updated>//g' | sed 's/<\/updated>//g' | sed 's/-/ /g' | awk '{print $1}')
+
+author=$(echo "$arxiv_call" | grep -io "<name>.*</name>" | sed 's/<name>//g' | sed 's/<\/name>//g' | sed -z 's/\n/, /g;s/, $/\n/')
+
+
+category=$(echo "$arxiv_call" | grep -io "<arxiv:primary_category.*scheme" -m 1| awk '/term/{print $3; exit}' | sed 's/term="//' | sed 's/"//')
+
+old_style=$(echo "$arxiv_id" | grep "\/")
+
+article_tag_last_word_title=$(echo "$title" | awk 'END {print $NF}')
+article_tag_first_author=$(echo "$author" | sed 's/,.*//g' | awk '{print $NF}')
+article_tag=$(echo "$article_tag_last_word_title""_"$article_tag_first_author""_"$is_updated")
+
+
+if [ -z "$old_style" ] 
+then
+	echo "@ARTICLE{"$article_tag",
+       AUTHOR = {"$author"},
+       TITLE = {"$title"},
+       YEAR = {"$is_updated"},
+       archivePrefix = {arXiv},
+       eprint = {"$arxiv_id"},
+       primaryClass = {"$category"}
+}"
+else
+	echo "@ARTICLE{"$article_tag",
+       AUTHOR = {"$author"},
+       TITLE = {"$title"},
+       YEAR = {"$is_updated"},
+       archivePrefix = {arXiv},
+       eprint = {"$arxiv_id"}
+}"
+       
+fi

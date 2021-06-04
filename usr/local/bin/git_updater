@@ -1,0 +1,32 @@
+#!/bin/bash
+
+DIRECTORY="/home/sourav/Dot-files/"
+
+mkdir -p  $DIRECTORY
+
+loc=("/home/sourav/.config/ranger" "/home/sourav/.config/dunst/"
+	"/home/sourav/dwm-6.2" "/home/sourav/.vimrc" "/home/sourav/.bashrc"
+	"/home/sourav/.xprofile" "/home/sourav/.xbindkeysrc"
+	"/usr/local/bin/git_updater" "/home/sourav/dmenu-5.0"
+	"/home/sourav/dwmblocks" "/home/sourav/distraction_blocker"
+	"/home/sourav/.config/zathura/zathurarc"
+	"/home/sourav/.config/alacritty/alacritty.yml"
+	"/home/sourav/.vim/UltiSnips" "/usr/local/bin/lmouse"
+	"/usr/local/bin/arxiv2bib" "/usr/local/bin/doi2bib"
+	"/usr/local/bin/ticker.sh")
+
+for i in ${loc[@]}; do
+	if [[ "$i" = "/home/sourav/.vimrc" ]]; then
+		mkdir -p $DIRECTORY"/vim/"
+		rsync -r $i $DIRECTORY"/vim/"
+	elif [[ "$i" = "/home/sourav/.vim/UltiSnips" ]]; then
+                mkdir -p $DIRECTORY"/vim/"
+                rsync -r $i $DIRECTORY"/vim/"
+	elif [[ ! -z $(echo "$i" | grep -io "/usr/local/bin") ]]; then
+		mkdir -p $DIRECTORY"/usr/local/bin"
+		rsync -r $i $DIRECTORY"/usr/local/bin"
+	else
+		rsync -r $i $DIRECTORY
+	fi
+
+done
