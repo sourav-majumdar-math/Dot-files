@@ -3,3 +3,5 @@ ndtv.com
 instagram.com
 facebook.com
 youtube.com
+vancedapp.com
+github.com/YTVanced/VancedManager
