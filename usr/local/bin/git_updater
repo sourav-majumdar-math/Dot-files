@@ -18,15 +18,15 @@ loc=("/home/sourav/.config/ranger" "/home/sourav/.config/dunst/"
 for i in ${loc[@]}; do
 	if [[ "$i" = "/home/sourav/.vimrc" ]]; then
 		mkdir -p $DIRECTORY"/vim/"
-		rsync -r $i $DIRECTORY"/vim/"
+		rsync -r $i $DIRECTORY"/vim/" 
 	elif [[ "$i" = "/home/sourav/.vim/UltiSnips" ]]; then
                 mkdir -p $DIRECTORY"/vim/"
-                rsync -r $i $DIRECTORY"/vim/"
+                rsync -r $i $DIRECTORY"/vim/" 
 	elif [[ ! -z $(echo "$i" | grep -io "/usr/local/bin") ]]; then
 		mkdir -p $DIRECTORY"/usr/local/bin"
 		rsync -r $i $DIRECTORY"/usr/local/bin"
 	else
-		rsync -r $i $DIRECTORY
+		rsync -r $i $DIRECTORY 
 	fi
 
 done

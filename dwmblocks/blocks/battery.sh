@@ -5,19 +5,20 @@ read -r capacity </sys/class/power_supply/BAT1/capacity
 read -r charge </sys/class/power_supply/BAT1/status
 
 if [[ $charge == "Charging" ]]; then
-	ICON=⚡
+	ICON="Charging"
 elif [[ $charge == "Full" ]]; then
-	ICON=⚡
+	ICON="Full"
 elif [[ $capacity -gt 75 ]]; then
-	ICON= 
+	ICON=""
 elif [[ $capacity -le 75 && $capacity -gt 50 ]]; then
-	ICON= 
+	ICON=""
 elif [[ $capacity -le 50 && $capacity -gt 30 ]]; then
-	ICON=  	
+	ICON=""  	
 elif [[ $capacity -le 30 && $capacity -gt 10 ]]; then
-	ICON=  
+	ICON="Low"
 else 
-	ICON=  
+	ICON="Low"  
 fi
 
-printf "|\x01 %s %s%%" "$ICON" "$capacity"
+printf "| %s %3s%% " "$ICON" "$capacity"
+

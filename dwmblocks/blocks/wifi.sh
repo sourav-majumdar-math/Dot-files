@@ -34,13 +34,13 @@ if ! [[ $wifi_perc == "NA" ]]; then
 	done
 
 	if [[ $i == 0 ]]; then
-		u_r="B/s"
+		u_r="Bs"
 	fi
 	if [[ $i == 1 ]]; then
-		u_r="KB/s"
+		u_r="KBs"
 	fi
 	if [[ $i == 2 ]]; then
-		u_r="MB/s"
+		u_r="MBs"
 	fi
 	
 	while [ $wifi_t_speed -gt 1024 ]
@@ -50,18 +50,18 @@ if ! [[ $wifi_perc == "NA" ]]; then
 	done
 
 	if [[ $j == 0 ]]; then
-		u_t="B/s"
+		u_t="Bs"
 	fi
 	if [[ $j == 1 ]]; then
-		u_t="KB/s"
+		u_t="KBs"
 	fi
 	if [[ $j == 2 ]]; then
-		u_t="MB/s"
+		u_t="MBs"
 	fi
 
 
 fi
 
 #wifi_name=$(iwgetid | grep -oP '"\K[^"]+')
-
-printf "|  ↓ %s%s ↑ %s%s %s%%" "$wifi_r_speed" "$u_r" "$wifi_t_speed" "$u_t" "$wifi_perc"
+#printf "|  ↓ %6s%4s ↑ %6s%4s %4s%%" "$wifi_r_speed" "$u_r" "$wifi_t_speed" "$u_t" "$wifi_perc"
+printf "|↓ %3s%3s ↑ %3s%3s %3s%%" "$wifi_r_speed" "$u_r" "$wifi_t_speed" "$u_t" "$wifi_perc"

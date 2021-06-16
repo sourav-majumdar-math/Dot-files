@@ -5,10 +5,15 @@
 pacmd list-sinks |
     awk '
         BEGIN {
-            ICONsn = "\x0c \x0b" # headphone unplugged, not muted
-            ICONsm = "\x0d \x0b" # headphone unplugged, muted
-            ICONhn = "\x0c \x0b" # headphone plugged in, not muted
-            ICONhm = "\x0d  \x0b" # headphone plugged in, muted
+            #ICONsn = "\x0c \x0b" # headphone unplugged, not muted
+            #ICONsm = "\x0d \x0b" # headphone unplugged, muted
+            #ICONhn = "\x0c \x0b" # headphone plugged in, not muted
+            #ICONhm = "\x0d  \x0b" # headphone plugged in, muted
+	    ICONsn = "S " # headphone unplugged, not muted
+            ICONsm = "SM " # headphone unplugged, muted
+            ICONhn = "H " # headphone plugged in, not muted
+            ICONhm = "HM " # headphone plugged in, muted
+ 
         }
         {
             if (f) {
@@ -33,11 +38,11 @@ pacmd list-sinks |
         }
         END {
             if (f) {
-                printf "| %s", h ? (m ? ICONhm : ICONhn) : (m ? ICONsm : ICONsn)
+                printf "| %s ", h ? (m ? ICONhm : ICONhn) : (m ? ICONsm : ICONsn)
                 if (vb) {
                     print vb
                 } else {
-                    printf "| L%s R%s\n", vl, vr
+                    printf "| L%s R%s \n", vl, vr
                 }
             }
         }

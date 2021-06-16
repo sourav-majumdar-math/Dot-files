@@ -5,6 +5,6 @@
 
 #printf "| %s" "$result"
 
-printf '|%b' \\U1f5e0
+#printf '|%b' \\U1f5e0
 #echo $'\u0965'
-
+printf "| MKT "

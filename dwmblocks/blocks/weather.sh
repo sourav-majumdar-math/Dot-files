@@ -12,4 +12,5 @@
 
 #printf "|%s" "$report_without_city"
 
-printf "|⛅"
+#printf "|⛅"
+printf "| WTTR "

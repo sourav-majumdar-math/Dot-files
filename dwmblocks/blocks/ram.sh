@@ -14,14 +14,24 @@ do
 	check_less_than_1024=$(echo "$ram_free < 1024" | bc)
 done
 
+#if [[ $i == 0 ]]; then
+#	u="KB"
+#	printf "|  %.1f %s" "$ram_free" "$u"
+#elif [[ $i == 1 ]]; then
+#	u="MB"
+#	printf "|  %.1f %s" "$ram_free" "$u"
+#elif [[ $i == 2 ]]; then
+#	u="GB"
+#	printf "|  %.2f %s" "$ram_free" "$u"
+#fi
 if [[ $i == 0 ]]; then
 	u="KB"
-	printf "|  %.1f %s" "$ram_free" "$u"
+	printf "| RAM %.1f%4s " "$ram_free" "$u"
 elif [[ $i == 1 ]]; then
 	u="MB"
-	printf "|  %.1f %s" "$ram_free" "$u"
+	printf "| RAM %.1f%4s " "$ram_free" "$u"
 elif [[ $i == 2 ]]; then
 	u="GB"
-	printf "|  %.2f %s" "$ram_free" "$u"
+	printf "| RAM %.2f%4s " "$ram_free" "$u"
 fi
 
