@@ -17,7 +17,7 @@ elif [[ $capacity -le 50 && $capacity -gt 30 ]]; then
 elif [[ $capacity -le 30 && $capacity -gt 10 ]]; then
 	ICON="BAT"
 else 
-	ICON="BAT"  
+	ICON="BAT" 
 fi
 
 printf "| %s %3s%% " "$ICON" "$capacity"
