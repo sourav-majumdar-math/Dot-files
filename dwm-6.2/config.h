@@ -11,7 +11,7 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 /*static const char *fonts[]          = { "FontAwesome:size=12", "monospace:size=14", "Noto Sans Symbols2: size=14"};*/
-static const char *fonts[]          = { "monospace:size=14"};
+static const char *fonts[]          = { "monospace:size=12"};
 static const char dmenufont[]       = "monospace:size=14";
 
 static const char col_black[]           = "#222222";
