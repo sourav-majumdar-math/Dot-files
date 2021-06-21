@@ -1,0 +1,26 @@
+#!/bin/bash
+
+app_name=$1
+duration=$2
+
+if [[ $((duration)) == $duration ]]; then
+	date_now=$(date +"%s")
+	m_2_seconds=$(($duration*60))
+	date_term=$(($date_now+m_2_seconds))
+	while [ $date_term -gt $date_now ]
+	do
+		date_now=$(date +"%s")
+		app_running=$(ps -e | grep $app_name)
+		diff=$((date_term-date_now))
+		min_left=$(($diff/60))
+		if [[ -n "$app_running" ]]; then
+			killall $app_name
+			notify-send -u critical $app_name" blocked. It will be unblocked after "$min_left" minutes."
+		fi
+		sleep 5
+	done
+	notify-send $app_name" unblocked."
+else
+	echo "Duration is not numeric"
+fi
+
