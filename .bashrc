@@ -141,3 +141,6 @@ unset __conda_setup
 
 export RANGER_LOAD_DEFAULT_RC=false
 
+app_block_function(){
+	nohup app_blocker "$1" "$2" </dev/null &>/dev/null &
+}
