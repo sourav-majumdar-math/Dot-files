@@ -5,10 +5,6 @@ export PATH=$PATH:"/home/sourav/anaconda3/bin"
 exec /home/sourav/distraction_blocker/distraction_blocker.sh > /dev/null  &
 exec /home/sourav/distraction_blocker/timed_distraction_blocker.sh > /dev/null  &
 dunst &
-wal --theme base16-nord
 xbindkeys -f ~/.xbindkeysrc &
-exec compton &
 xinput --set-prop $(xinput list --id-only "ELAN1200:00 04F3:3090 Touchpad") "Device Enabled" 0 &
-exec /home/sourav/dwmblocks/daemons/pulse_daemon.sh &
-exec dwmblocks & 
-exec dwm 
+exec /home/sourav/dwmblocks/daemons/pulse_daemon.sh & 

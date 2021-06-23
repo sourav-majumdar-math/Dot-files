@@ -13,7 +13,7 @@ loc=("/home/sourav/.config/ranger" "/home/sourav/.config/dunst/"
 	"/home/sourav/.config/alacritty/alacritty.yml"
 	"/home/sourav/.vim/UltiSnips" "/usr/local/bin/lmouse"
 	"/usr/local/bin/arxiv2bib" "/usr/local/bin/doi2bib"
-	"/usr/local/bin/ticker.sh" "/usr/local/bin/passmenu" "/usr/local/bin/app_blocker")
+	"/usr/local/bin/ticker.sh" "/usr/local/bin/passmenu" "/usr/local/bin/app_blocker" "/usr/local/bin/call_dwm" "/usr/share/xsessions/dwm.desktop")
 
 for i in ${loc[@]}; do
 	if [[ "$i" = "/home/sourav/.vimrc" ]]; then
@@ -25,6 +25,9 @@ for i in ${loc[@]}; do
 	elif [[ ! -z $(echo "$i" | grep -io "/usr/local/bin") ]]; then
 		mkdir -p $DIRECTORY"/usr/local/bin"
 		rsync -r $i $DIRECTORY"/usr/local/bin"
+	elif [[ ! -z $(echo "$i" | grep -io "/usr/share/xsessions") ]]; then
+		mkdir -p $DIRECTORY"/usr/share/xsessions"
+		rsync -r $i $DIRECTORY"/usr/share/xsessions"
 	else
 		rsync -r $i $DIRECTORY 
 	fi
