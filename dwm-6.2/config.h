@@ -60,9 +60,9 @@ static const Rule rules[] = {
 	{ "Spyder",  	NULL,      NULL,       1<<2,       	0,           -1 ,       50,50,500,500,        		5 },
 	{ "Chromium",  	NULL,      NULL,       1<<1,       	0,           -1 ,       50,50,500,500,        		5 },
 	{ "Zathura",  	NULL,      NULL,       0,       	0,           -1 ,       50,50,500,500,        		5 },
+	{ "VirtualBox Machine",  	NULL,      NULL,       1<<3,       	0,           -1 ,       50,50,500,500,        		5 },
 	{ "Atom",  	NULL,      NULL,       1<<2,       	0,           -1 ,       50,50,500,500,        		5 }
 };
-
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
