@@ -8,6 +8,10 @@ endif
 " Specify a directory for plugins
 " " - For Neovim: stdpath('data') . '/plugged'
 " " - Avoid using standard Vim directory names like 'plugin'
+
+autocmd BufRead,BufNewFile /tmp/calcurse* set filetype=markdown
+autocmd BufRead,BufNewFile ~/calcurse/notes/* set filetype=markdown
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'vimwiki/vimwiki'
