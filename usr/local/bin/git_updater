@@ -15,7 +15,7 @@ loc=("/home/sourav/.config/ranger" "/home/sourav/.config/dunst/"
 	"/usr/local/bin/arxiv2bib" "/usr/local/bin/doi2bib"
 	"/usr/local/bin/ticker.sh" "/usr/local/bin/passmenu"
 	"/usr/local/bin/app_blocker" "/usr/local/bin/call_dwm"
-	"/usr/share/xsessions/dwm.desktop" "/home/sourav/.calcurse")
+	"/usr/share/xsessions/dwm.desktop") 
 
 for i in ${loc[@]}; do
 	if [[ "$i" = "/home/sourav/.vimrc" ]]; then
