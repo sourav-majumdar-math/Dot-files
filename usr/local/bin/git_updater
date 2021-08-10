@@ -15,7 +15,7 @@ loc=("/home/sourav/.config/ranger" "/home/sourav/.config/dunst/"
 	"/usr/local/bin/arxiv2bib" "/usr/local/bin/doi2bib"
 	"/usr/local/bin/ticker.sh" "/usr/local/bin/passmenu"
 	"/usr/local/bin/app_blocker" "/usr/local/bin/call_dwm"
-	"/usr/share/xsessions/dwm.desktop") 
+	"/usr/share/xsessions/dwm.desktop" "/etc/cron.daily/contemplate") 
 
 for i in ${loc[@]}; do
 	if [[ "$i" = "/home/sourav/.vimrc" ]]; then
@@ -30,6 +30,9 @@ for i in ${loc[@]}; do
 	elif [[ ! -z $(echo "$i" | grep -io "/usr/share/xsessions") ]]; then
 		mkdir -p $DIRECTORY"/usr/share/xsessions"
 		rsync -r $i $DIRECTORY"/usr/share/xsessions"
+	elif [[ ! -z $(echo "$i" | grep -io "/etc/cron.daily/contemplate") ]]; then
+		mkdir -p $DIRECTORY"/etc/cron.daily"
+		rsync -r $i $DIRECTORY"/etc/cron.daily"
 	else
 		rsync -r $i $DIRECTORY 
 	fi

@@ -66,3 +66,13 @@ See [here](https://www.privacytools.io/browsers/#about_config). Use the `Cookies
 ## ticker.sh
 
 `ticker.sh` is a yahoo finance api script by [pstadler](https://github.com/pstadler/ticker.sh). This requires `jq`, install it using `apt install jq`. I use this in the nifty.sh script in dwmblocks/blocks.
+
+## Epictetus
+
+Clone the `Epictetus` repository in `/home/sourav`. Set up the `cron.daily` script to `/etc/cron.daily`. Create a file `contemplate_out` in `/home/sourav`.
+
+## Time issue in dual booted system
+
+To fix BIOS time issues on dual booted windows and Ubuntu systems, make Ubuntu use Local time. Set it up as follows `timedatectl set-local-rtc 1 --adjust-system-clock`.
+
+[Source](https://ubuntuhandbook.org/index.php/2016/05/time-differences-ubuntu-1604-windows-10/)

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/bin/bash /home/sourav/Epictetus/passage.sh > /home/sourav/contemplate_out
+
+#cat $(source /home/sourav/Epictetus/passage.sh) > /home/sourav/contemplate_out
