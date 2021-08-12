@@ -32,6 +32,8 @@ Add bright.sh to enable brightness function. Copy the 'bright.sh' script into /e
 
 Install with `apt install ranger`. Then `mkdir ~/.config/ranger` and copy the contents of the `ranger` folder there. Install `ueberzug` for previewing images with `pip3 install ueberzug`. In `.config/ranger/` create an executable with `chmod +x scope.sh`.
 
+Install `fzf` with `sudo apt install fzf`.
+
 ## zathura
 
 Install `zathura-djvu` from apt for djvu compatibility.
