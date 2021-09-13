@@ -13,5 +13,5 @@ snapshot=$(ticker.sh ^NSEI ^NSMIDCP ^NDX 399106.SZ)
 snapshot_clean=$( echo "$snapshot" | sed 's/\^NSEI/NIFTY/g' | sed 's/\^NSMIDCP/NIFTY N50/g' | sed 's/\^NDX/NASDAQ 100/g'| sed 's/399106.SZ/SZSE/g')
 TERMINAL="alacritty"
 
-exec $TERMINAL -t "Notification-Market" --hold -o colors.cursor.cursor=CellBackground background_opacity=1 font.size=11.0 -e printf "\n\n\n%b" "$snapshot_clean"
+exec $TERMINAL -t "Notification-Market" --hold -o colors.cursor.cursor=CellBackground window.opacity=1 font.size=11.0 -e printf "\n\n\n%b" "$snapshot_clean"
 
