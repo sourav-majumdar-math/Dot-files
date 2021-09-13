@@ -7,4 +7,5 @@ exec /home/sourav/distraction_blocker/timed_distraction_blocker.sh > /dev/null  
 dunst &
 xbindkeys -f ~/.xbindkeysrc &
 xinput --set-prop $(xinput list --id-only "ELAN1200:00 04F3:3090 Touchpad") "Device Enabled" 0 &
-exec /home/sourav/dwmblocks/daemons/pulse_daemon.sh & 
+exec /home/sourav/dwmblocks/daemons/pulse_daemon.sh &
+tlp start 

@@ -78,3 +78,7 @@ Clone the `Epictetus` repository in `/home/sourav`. Set up the `cron.daily` scri
 To fix BIOS time issues on dual booted windows and Ubuntu systems, make Ubuntu use Local time. Set it up as follows `timedatectl set-local-rtc 1 --adjust-system-clock`.
 
 [Source](https://ubuntuhandbook.org/index.php/2016/05/time-differences-ubuntu-1604-windows-10/)
+
+## tlp
+
+`sudo apt install tlp`
